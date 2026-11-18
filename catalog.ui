@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CatalogPage</class>
+ <widget class="QWidget" name="CatalogPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1100</width>
+    <height>780</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Nunito,Varela Round,Segoe UI,Corbel,Helvetica Neue,Noto Sans,sans-serif</family>
+   </font>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+* { font-family: &quot;Nunito&quot;, &quot;Varela Round&quot;, &quot;Segoe UI&quot;, &quot;Corbel&quot;, &quot;Helvetica Neue&quot;, &quot;Noto Sans&quot;, sans-serif; color: #2E3A24; }
+
+QWidget#CatalogPage { background: #F7FAF3; }
+QLabel { background: transparent; }
+
+/* ---------- Заголовки ---------- */
+QLabel#catalogTitle { font-size: 21pt; font-weight: bold; }
+QLabel#catalogSubtitle { font-size: 11pt; color: #8A9B76; }
+
+/* ---------- Поля ввода и комбо-боксы ---------- */
+QLineEdit {
+    background: #FFFFFF;
+    border: 1px solid #DDE7CF;
+    border-radius: 20px;
+    padding: 10px 18px;
+    font-size: 10pt;
+    selection-background-color: #CDEE94;
+    placeholder-text-color: #A3B38E;
+}
+QLineEdit:focus { border: 1px solid #8FD630; }
+
+QComboBox {
+    background: #FFFFFF;
+    border: 1px solid #DDE7CF;
+    border-radius: 20px;
+    padding: 8px 15px;
+    font-size: 10pt;
+    color: #2E3A24;
+}
+QComboBox:focus { border: 1px solid #8FD630; }
+QComboBox::drop-down { border: none; }
+
+/* ---------- Таблица ---------- */
+QTableWidget {
+    background: #FFFFFF;
+    border: 1px solid #E4ECD8;
+    border-radius: 20px;
+    gridline-color: transparent;
+    font-size: 10pt;
+    padding: 6px;
+}
+QTableWidget::item { padding: 6px 10px; border-bottom: 1px solid #EEF3E6; }
+QTableWidget::item:selected { background: #E6F6C3; color: #2E3A24; }
+QHeaderView::section {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #E4ECD8;
+    padding: 8px 10px;
+    color: #6E9A3A;
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+/* ---------- Кнопки действий ---------- */
+QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #C4F56E, stop:1 #8FD630);
+    border: 1px solid rgba(255, 255, 255, 230);
+    border-radius: 20px;
+    padding: 10px 24px;
+    font-size: 12pt;
+    color: #1E2B12;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #D3FA8C, stop:1 #A0E448);
+}
+QPushButton:pressed {
+    background: #84C72A;
+}
+   </string>
+  </property>
+  <layout class="QVBoxLayout" name="catalogLayout">
+   <property name="spacing">
+    <number>14</number>
+   </property>
+   <property name="leftMargin">
+    <number>20</number>
+   </property>
+   <property name="topMargin">
+    <number>20</number>
+   </property>
+   <property name="rightMargin">
+    <number>20</number>
+   </property>
+   <property name="bottomMargin">
+    <number>20</number>
+   </property>
+   <item>
+    <widget class="QLabel" name="catalogTitle">
+     <property name="text">
+      <string>Каталог товаров</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="catalogFilters">
+     <property name="spacing">
+      <number>10</number>
+     </property>
+     <item>
+      <widget class="QLineEdit" name="catalogSearch">
+       <property name="minimumSize">
+        <size>
+         <width>300</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="placeholderText">
+        <string>Название товара или бренд</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="categoryFilter">
+       <item>
+        <property name="text">
+         <string>Все категории</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Молочные продукты</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Мясо и птица</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Овощи и фрукты</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Выпечка</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Бакалея</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Напитки</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="sortFilter">
+       <item>
+        <property name="text">
+         <string>Сначала дешевле</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Сначала дороже</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>По названию</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <spacer name="filterSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="catalogTable">
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <property name="showGrid">
+      <bool>false</bool>
+     </property>
+     <attribute name="horizontalHeaderStretchLastSection">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>Фото</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Товар</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Бренд</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Лучшая цена</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Магазин</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Действие</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
