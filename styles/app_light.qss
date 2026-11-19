@@ -1,0 +1,295 @@
+/* Выгодно — спокойная светлая тема с тёплыми нейтральными оттенками */
+* {
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+QWidget {
+    color: #283129;
+    font-size: 10pt;
+}
+QMainWindow, QDialog, QWidget#centralwidget, QWidget#mainArea,
+QWidget#BudgetPage, QWidget#MapPage, QStackedWidget,
+QScrollArea#budgetScrollArea, QScrollArea#budgetScrollArea QWidget#qt_scrollarea_viewport {
+    background-color: #F3F1EA;
+    color: #283129;
+}
+QLabel {
+    background: transparent;
+    padding: 0;
+}
+QFrame#sidebar {
+    background-color: #222C25;
+    border: none;
+    border-right: 1px solid #374139;
+}
+QLabel#brandLabel {
+    color: #F5F2E9;
+    font-size: 21pt;
+    font-weight: 700;
+    padding: 0 0 2px 0;
+}
+QLabel#cityLabel {
+    color: #B8C0B4;
+    font-size: 10pt;
+    padding: 0 0 22px 1px;
+}
+QPushButton {
+    background-color: #E9E7DE;
+    color: #303A31;
+    border: 1px solid #D8D5C9;
+    border-radius: 7px;
+    padding: 9px 15px;
+    min-height: 22px;
+    font-size: 9.5pt;
+    font-weight: 600;
+}
+QPushButton:hover {
+    background-color: #E1DFD5;
+    border-color: #C8C5B9;
+}
+QPushButton:pressed {
+    background-color: #D8D6CC;
+}
+QPushButton:disabled {
+    color: #A6A69D;
+    background-color: #ECEAE4;
+    border-color: #E3E0D7;
+}
+QPushButton#catalogNavButton, QPushButton#cartNavButton,
+QPushButton#compareNavButton, QPushButton#budgetNavButton,
+QPushButton#mapNavButton {
+    background-color: transparent;
+    color: #C7CEC4;
+    border: 1px solid transparent;
+    border-left: 3px solid transparent;
+    border-radius: 5px;
+    text-align: left;
+    padding: 12px 13px;
+    min-height: 22px;
+    font-size: 10pt;
+    font-weight: 600;
+}
+QPushButton#catalogNavButton:hover, QPushButton#cartNavButton:hover,
+QPushButton#compareNavButton:hover, QPushButton#budgetNavButton:hover,
+QPushButton#mapNavButton:hover {
+    background-color: #303B33;
+    color: #FFFFFF;
+}
+QPushButton#catalogNavButton:checked, QPushButton#budgetNavButton:checked,
+QPushButton#mapNavButton:checked {
+    background-color: #354137;
+    color: #FAF8F1;
+    border: 1px solid #455347;
+    border-left: 3px solid #A5A17D;
+}
+QFrame#savingFrame {
+    background-color: #303B33;
+    border: 1px solid #465347;
+    border-radius: 9px;
+}
+QLabel#savingCaption {
+    color: #BEC6B9;
+    font-size: 8.5pt;
+}
+QLabel#savingValue {
+    color: #F5F2E9;
+    font-size: 21pt;
+    font-weight: 700;
+}
+QLabel#savingHint {
+    color: #AEB8AA;
+    font-size: 8.5pt;
+}
+QLabel#pageTitle, QLabel#pageTitleLabel, QLabel#titleLabel,
+QLabel#dialogTitleLabel {
+    color: #252E27;
+    font-size: 23pt;
+    font-weight: 700;
+    padding: 0;
+}
+QLabel#pageSubtitle, QLabel#pageSubtitleLabel, QLabel#descriptionLabel {
+    color: #72786E;
+    font-size: 10pt;
+}
+QLabel#dataModeLabel, QLabel#demoBadgeLabel, QLabel#mapProviderLabel {
+    color: #6B725D;
+    background-color: #EAEAE1;
+    border: 1px solid #D8DCCF;
+    border-radius: 5px;
+    padding: 7px 10px;
+    font-size: 8pt;
+    font-weight: 600;
+}
+QLineEdit, QComboBox, QSpinBox, QDoubleSpinBox {
+    background-color: #FFFDF8;
+    color: #283129;
+    border: 1px solid #D6D4C9;
+    border-radius: 7px;
+    padding: 8px 11px;
+    min-height: 24px;
+    selection-background-color: #DDE2D4;
+    selection-color: #283129;
+}
+QLineEdit:focus, QComboBox:focus, QSpinBox:focus, QDoubleSpinBox:focus {
+    border: 1px solid #92977B;
+    background-color: #FFFFFF;
+}
+QLineEdit::placeholder {
+    color: #999D92;
+}
+QComboBox::drop-down, QSpinBox::up-button, QSpinBox::down-button,
+QDoubleSpinBox::up-button, QDoubleSpinBox::down-button {
+    border: none;
+    width: 20px;
+}
+QComboBox QAbstractItemView {
+    background-color: #FFFDF8;
+    color: #283129;
+    border: 1px solid #D6D4C9;
+    selection-background-color: #E7E9DF;
+    selection-color: #283129;
+    padding: 4px;
+}
+QPushButton#addToCartButton, QPushButton#compareButton,
+QPushButton#runButton, QPushButton#addProductButton,
+QPushButton#addButton, QPushButton#compareCartButton,
+QPushButton#searchButton {
+    background-color: #465A48;
+    color: #FFFFFF;
+    border: 1px solid #465A48;
+    border-radius: 7px;
+    font-weight: 600;
+}
+QPushButton#addToCartButton:hover, QPushButton#compareButton:hover,
+QPushButton#runButton:hover, QPushButton#addProductButton:hover,
+QPushButton#addButton:hover, QPushButton#compareCartButton:hover,
+QPushButton#searchButton:hover {
+    background-color: #394B3B;
+    border-color: #394B3B;
+}
+QPushButton#removeProductButton, QPushButton#removeItemButton {
+    color: #9A5E4C;
+}
+QTableWidget {
+    background-color: #FFFDF8;
+    alternate-background-color: #F7F6F0;
+    color: #2D352E;
+    border: 1px solid #DCD9CE;
+    border-radius: 8px;
+    gridline-color: transparent;
+    selection-background-color: #E4E8DE;
+    selection-color: #283129;
+    outline: 0;
+    font-size: 9.5pt;
+}
+QTableWidget::item {
+    padding: 8px 10px;
+    border: none;
+}
+QTableWidget::item:selected {
+    background-color: #E4E8DE;
+    color: #283129;
+}
+QHeaderView::section {
+    background-color: #F0EFE8;
+    color: #72796E;
+    border: none;
+    border-bottom: 1px solid #DCD9CE;
+    padding: 11px 10px;
+    min-height: 20px;
+    font-size: 8.5pt;
+    font-weight: 700;
+}
+QLabel#budgetCaptionLabel, QLabel#toleranceCaptionLabel,
+QLabel#modeCaptionLabel, QLabel#productCaptionLabel,
+QLabel#quantityCaptionLabel {
+    color: #777D70;
+    font-size: 8.5pt;
+    font-weight: 700;
+}
+QLabel#maximumBudgetLabel {
+    color: #6F7568;
+    font-size: 9.5pt;
+    font-weight: 600;
+}
+QLabel#basketTitleLabel, QLabel#resultHeadingLabel {
+    color: #29332B;
+    font-size: 14pt;
+    font-weight: 700;
+}
+QLabel#routeNoteLabel {
+    color: #596257;
+    font-size: 9pt;
+    font-weight: 600;
+}
+QLabel#resultStatusLabel {
+    color: #586257;
+    font-size: 9pt;
+}
+QLabel#basketHintLabel, QLabel#routeNoteTextLabel,
+QLabel#csvHintLabel, QLabel#disclaimerLabel,
+QLabel#mapStatusLabel, QLabel#statusLabel {
+    color: #777D72;
+    font-size: 8.5pt;
+}
+QFrame#settingsFrame, QFrame#footnoteFrame,
+QFrame#mapToolbarFrame, QFrame#mapHost {
+    background-color: #FFFDF8;
+    border: 1px solid #DDDACE;
+    border-radius: 9px;
+}
+QFrame#footnoteFrame {
+    background-color: #F0EFE8;
+    border-left: 3px solid #A69B78;
+}
+QLabel#resultTotalLabel, QLabel#totalValueLabel {
+    color: #354A39;
+    font-size: 20pt;
+    font-weight: 700;
+}
+QLabel#summaryLabel {
+    color: #465A48;
+    font-size: 11pt;
+    font-weight: 600;
+}
+QLabel#totalCaption {
+    color: #596257;
+    font-size: 11pt;
+    font-weight: 600;
+}
+QLabel#itemsCountLabel {
+    color: #777D70;
+    font-size: 10pt;
+}
+QLabel#mapPlaceholderLabel, QLabel#mapSetupMessage {
+    color: #646D61;
+    background-color: #F7F6F0;
+    padding: 34px;
+    font-size: 10.5pt;
+}
+QScrollArea {
+    border: none;
+    background-color: #F3F1EA;
+}
+QScrollBar:vertical {
+    background-color: #EAE8E0;
+    width: 10px;
+    margin: 0;
+}
+QScrollBar::handle:vertical {
+    background-color: #C7C9BC;
+    min-height: 28px;
+    border-radius: 5px;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0;
+}
+QToolTip {
+    background-color: #29342B;
+    color: #F7F5EE;
+    border: 1px solid #68745A;
+    padding: 6px;
+}
+QMessageBox, QDialog {
+    background-color: #F3F1EA;
+    color: #283129;
+}

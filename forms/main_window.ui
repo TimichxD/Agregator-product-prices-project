@@ -1,0 +1,367 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1380</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1040</width>
+    <height>720</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Выгодно — покупки в Уфе</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="rootLayout">
+    <property name="leftMargin">
+     <number>20</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>20</number>
+    </property>
+    <property name="bottomMargin">
+     <number>10</number>
+    </property>
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="brandHeaderFrame">
+      <layout class="QHBoxLayout" name="brandHeaderLayout">
+       <property name="leftMargin">
+        <number>4</number>
+       </property>
+       <property name="topMargin">
+        <number>14</number>
+       </property>
+       <property name="rightMargin">
+        <number>4</number>
+       </property>
+       <property name="bottomMargin">
+        <number>12</number>
+       </property>
+       <property name="spacing">
+        <number>12</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="brandLabel">
+         <property name="text">
+          <string>Выгодно</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="cityLabel">
+         <property name="text">
+          <string>Уфа</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="brandSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QStackedWidget" name="pageStack">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="mainArea">
+       <layout class="QVBoxLayout" name="mainLayout">
+        <property name="spacing">
+         <number>12</number>
+        </property>
+        <property name="leftMargin">
+         <number>26</number>
+        </property>
+        <property name="topMargin">
+         <number>24</number>
+        </property>
+        <property name="rightMargin">
+         <number>26</number>
+        </property>
+        <property name="bottomMargin">
+         <number>22</number>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="headerLayout">
+          <item>
+           <layout class="QVBoxLayout" name="headerTextLayout">
+            <item>
+             <widget class="QLabel" name="pageTitle">
+              <property name="text">
+               <string>Каталог продуктов</string>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>42</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="pageSubtitle">
+              <property name="text">
+               <string>Ищите товары, сравнивайте предложения магазинов и собирайте корзину.</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="headerSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="searchLayout">
+          <item>
+           <widget class="QLineEdit" name="searchEdit">
+            <property name="minimumHeight">
+             <number>43</number>
+            </property>
+            <property name="placeholderText">
+             <string>Поиск по названию или категории</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="categoryCombo">
+            <property name="minimumSize">
+             <size>
+              <width>170</width>
+              <height>43</height>
+             </size>
+            </property>
+            <item>
+             <property name="text">
+              <string>Все категории</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="importCatalogButton">
+            <property name="text">
+             <string>Загрузить каталог CSV</string>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>190</width>
+              <height>43</height>
+             </size>
+            </property>
+            <property name="minimumHeight">
+             <number>43</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="resetSearchButton">
+            <property name="text">
+             <string>Сбросить</string>
+            </property>
+            <property name="minimumHeight">
+             <number>43</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QLabel" name="emptyCatalogLabel">
+          <property name="text">
+           <string>Каталог пока пуст.
+Загрузите CSV с товарами и ценами магазинов. Фотографии можно указать в файле или добавить в папку data/images.</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+          <property name="minimumHeight">
+           <number>126</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="productsTable">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>300</height>
+           </size>
+          </property>
+          <property name="columnCount">
+           <number>6</number>
+          </property>
+          <property name="rowCount">
+           <number>0</number>
+          </property>
+          <column>
+           <property name="text">
+            <string>Фото</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Товар</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Категория</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Фасовка</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Цена от</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Магазин</string>
+           </property>
+          </column>
+          <property name="alternatingRowColors">
+           <bool>true</bool>
+          </property>
+          <property name="showGrid">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="actionLayout">
+          <item>
+           <widget class="QPushButton" name="addToCartButton">
+            <property name="text">
+             <string>Добавить в корзину</string>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>230</width>
+              <height>45</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="actionSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="openCartButton">
+            <property name="text">
+             <string>Открыть корзину</string>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>160</width>
+              <height>45</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="compareButton">
+            <property name="text">
+             <string>Сравнить цены</string>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>160</width>
+              <height>45</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QLabel" name="statusLabel">
+          <property name="text">
+           <string>Каталог пуст. Загрузите CSV-файл с товарами и ценами магазинов.</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="bottomNavFrame">
+      <layout class="QHBoxLayout" name="bottomNavLayout">
+       <property name="leftMargin">
+        <number>8</number>
+       </property>
+       <property name="topMargin">
+        <number>9</number>
+       </property>
+       <property name="rightMargin">
+        <number>8</number>
+       </property>
+       <property name="bottomMargin">
+        <number>6</number>
+       </property>
+       <property name="spacing">
+        <number>8</number>
+       </property>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources />
+ <connections />
+</ui>

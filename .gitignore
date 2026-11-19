@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.idea/
+.vscode/
+data/products.csv
+!data/products.csv
+data/images/*
+!data/images/.gitkeep
+data/my_cart.csv
