@@ -191,7 +191,7 @@ class CartPage(QWidget):
                     {"product_id", "id"} & headers or {"name", "product_name"} & headers
                 ):
                     raise ValueError(
-                        "Неверный формат. Нужны столбцы product_id (или name) и quantity."
+                        "Неверный формат. В файле должны быть следующие столбцы: названия продуктов (product_id/name) и их количество (quanity)."
                     )
                 for line_number, row in enumerate(reader, start=2):
                     normalized = {
